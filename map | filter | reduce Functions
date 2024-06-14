@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map fuction</title>
+</head>
+<body>
+    <script>
+        let priceUSD = [20,35,13];
+        let priceINR = priceUSD.map(x => x*83)
+        console.log(priceINR)
+
+        const input = [ //array of objects
+            {name:'John',age:15},
+            {name:'Radha',age:45},
+            {name:'Kaushik',age:12},
+            {name:'Anu',age:21},
+            {name:'Divya',age:26}
+              ]
+            const ages = input.map(x=> x.age)
+            const names = input.map(y=> y.name)
+            console.log(ages)
+            console.log(names)
+
+    </script>
+ <script>
+        let cost = [35,234,12,34,54,123];
+        let cardLessthan100 = cost.filter(x => x<=100)
+        console.log(cardLessthan100)
+
+        let cardmorethan100 = cost.filter(y => y>=100)
+        console.log(cardmorethan100)
+
+        
+    </script>
+<script>
+                arr2d = [
+                        ["a", "b", "c"],
+                        ["c", "d", "f"],
+                        ["d", "f", "g"],
+                    ];
+        let count = arr2d.flat().reduce( 
+            (accumulator,currval)=>{
+                if(accumulator[currval])
+                 accumulator[currval]++
+                else
+                accumulator[currval] =1
+              return accumulator 
+            }
+        ,{})
+        console.log(count);
+
+    </script>
+</body>
+</html>
+
