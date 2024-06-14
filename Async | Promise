@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+
+    <script>
+       /* try{
+            num =prompt("Enter a number")
+            if(num ===''){
+                alert("Cannot be empty")
+                console.log("Cannot be empty")
+            }
+            if(isNaN(num)){
+                console.log("Enter a valid number")
+                alert('Enter a valid number')
+            }
+        }
+        catch(error){
+            console.log(error)
+        }
+        finally{
+            console.log('Bye')
+        } */
+
+        try{
+            let number = prompt('Enter a number')
+            if(number ===''){
+                console.log('cannot be empty')
+                alert('Cannot be Empty')
+            }
+            if(isNaN(number)){
+                console.log('enter a valid number')
+                alert('Enter a valid Number');
+            }
+        }
+        catch(error){
+             console.log(error)
+        }
+        finally{
+            console.log('Bye see You Back again')
+        }
+
+        let tatkalBook  = new Promise((resolve,reject) => {
+            let bookingSuccess = true;
+            if(bookingSuccess){
+                resolve()
+            }else{
+                reject()
+            }
+       
+        })
+        tatkalBook.then(success)
+        .catch(failure)
+        function success(){
+            console.log('Thanks buddy ! i will transfer the amount')
+        }
+        function failure(){
+            console.log('Thanks for trying')
+        }
+
+    </script>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and Await</title>
+</head>
+<body>
+    <script>
+        async function fn(){
+            return "Hello"
+        }
+        console.log(fn())
+        fn().then(msg=>console.log(msg))
+
+    </script>
+    
+</body>
+</html>
