@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach function</title>
+</head>
+<body>
+    <script>
+        let words = ["apple", "banana", "grape"];
+        let length = [];
+        words.forEach((value)=> length.push(value.length));
+        console.log("After length is : ",length)
+
+        console.log("--------2---------")
+        let arr = [1, -2, 3, -4, 5]
+        let positive =[];
+        arr.forEach(value =>{
+            if(value>0){
+                positive.push(value)
+            }
+        })
+        console.log(positive)
+        console.log("-------3-------")
+        
+        students = [
+            { name: "Alice", grade: "A" },
+            { name: "Bob", grade: "B" },
+            { name: "Charlie", grade: "C" }
+        ];  
+        students.forEach(value =>{
+            value.grade  = "A++"
+        })   
+        console.log(students)  
+        console.log("-------4------")
+        let numbers =[1, 2, 3];
+        numbers.forEach((element,index,arr)=>{
+            arr[index] =(element+1)
+        })
+        console.log("After Icreament :",numbers)
+        console.log("-------5-----");
+        let user =[
+            { name: "Alice", age: 25 },
+            { name: "Bob", age: 30 },
+            { name: "Charlie", age: 22 }
+        ];
+        user.forEach(value =>{
+            // value.age =value.age+1   // age+1 not accepted because noraml age not defined
+            value.age += 1
+        })
+        console.log(user)
+        console.log("-------6-----");
+        arr =[1, 2, 3, 4, 5];
+        index_rem =[1,3];
+        index_rem.forEach(index=>{
+           arr.splice(index,1)
+        })
+        console.log(arr)
+
+        console.log("-------7-----");
+        arr = [2, 3, 4];
+        arr.map(value=>{
+            value = value*value
+            console.log(value)
+        })
+        
+        console.log("-------8------")
+        numbers= [1, 2, 3, 4, 5, 6];
+        sumEven =[];
+       numbers.forEach(number =>{
+        if(number %2 ==0){
+            sumEven += number
+        }
+       })
+       console.log(sumEven) 
+       numbers = [1, 2, 3, 4, 5, 6];
+       let evenSum = 0;
+       
+       numbers.forEach(number => {
+           if (number % 2 === 0) {
+           evenSum += number;
+           }
+       });
+
+       console.log(evenSum); 
+        numbers = [1, 2, 3, 4, 5, 6];
+        let evenSum = 0;
+        numbers.forEach(number => {
+            if(number % 2 === 0)  {
+                evenSum += number;
+            }
+        });
+        console.log(evenSum)
+        console.log("-------9------")       
+         items = ["Item 1", "Item 2", "Item 3"];
+         itemlist ="<ul>";
+         items.forEach(item =>{
+             itemlist += `<li>${item}</li>`
+         })
+         itemlist += "</ul>";
+         console.log(itemlist)
+        items = ["Item 1", "Item 2", "Item 3"];
+        let listitem ="<ul>"
+        items.forEach(item =>{
+            listitem += `<li> ${item} </li>`
+        })
+        listitem += "</ul>";
+        console.log(listitem)
+        console.log("-------10------")
+        let listitem = "<ul>"
+        items.forEach(item =>{
+            listitem += `<li> ${item} </li>`
+        })
+        listitem += "</ul>";
+        console.log(listitem);
+
+        
+        
+    </script>
+</body>
+</html>
